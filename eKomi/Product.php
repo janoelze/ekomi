@@ -40,4 +40,13 @@ class Product
             ? $this->productOther['image_url']
             : null;
     }
+    
+    
+    public function setProductName($productName) {
+        if (mb_detect_encoding($productName, 'UTF-8')) {
+            iconv("UTF-8", "ISO-8859-1//TRANSLIT", $productName);
+        }
+        $this->productName = $productName;
+        return $this;
+    }
 }
