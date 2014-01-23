@@ -134,7 +134,7 @@ class eKomi
         ));
 
         if ($response['done'] == 1 && isset($response['link'])) {
-            $order->setLink($response['link']);
+            $order->setReviewLink($response['link']);
             return true;
         } else {
             return false;
@@ -171,7 +171,7 @@ class eKomi
     
     
     /**
-     * Flunt getter / setter for the members following
+     * Fluent getter / setter for the members following
      */
     
     public function getInterfaceId() {
