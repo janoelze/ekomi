@@ -16,6 +16,7 @@ class Order
 {
     protected $orderId;
     protected $products;
+    protected $reviewLink;
     
     
     public function __construct() {
@@ -57,5 +58,16 @@ class Order
             $ids[] = $product->getProductId();
         }
         return $ids;
+    }
+    
+    
+    public function getReviewLink() {
+        return $this->reviewLink;
+    }
+    
+    
+    public function setReviewLink($reviewLink() {
+        $this->reviewLink = $reviewLink;
+        return $this;
     }
 }
