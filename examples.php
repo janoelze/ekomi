@@ -50,7 +50,7 @@ $order->setOrderId('999')
       ->addProduct($product);
 
 // Since PHP 5.4 you can also do the following
-// to add a Product the an Order:
+// to add a Product to an Order:
 $order->addProduct((new eKomi\Order)->setProductId('1234-5678')->setProductName(/* ... */)->setProductImage(/* ... */));
 
 
