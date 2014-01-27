@@ -170,6 +170,13 @@ class eKomi
     }
     
     
+    public function getProductResearchQuestions() {
+        //@TODO get questions from the following API call
+        // http://api.ekomi.de/get_research.php?type=csv&interface_id=&interface_pw=&content=questions
+        return array();
+    }
+    
+    
     /**
      * Fluent getter / setter for the members following
      */
