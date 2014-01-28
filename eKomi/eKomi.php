@@ -99,6 +99,10 @@ class eKomi
         if (is_resource($this->shopFeedbackResource)) {
             fclose($this->productFeedbackResource);
         }
+        
+        if (is_resource($this->curl)) {
+            curl_close($this->curl);
+        }
     }
     
     
