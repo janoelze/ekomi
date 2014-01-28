@@ -30,22 +30,27 @@ class eKomi
     protected $shopFeedbackResource;
     
     /**
-     * @var resource 
+     * @var resource
+     */
+    protected $curl;
+    
+    /**
+     * @var integer 
      */
     protected $interfaceId;
     
     /**
-     * @var resource 
+     * @var string 
      */
     protected $interfacePassword;
     
     /**
-     * @var resource 
+     * @var string 
      */
     protected $version;
     
     /**
-     * @var resource 
+     * @var boolean 
      */
     protected $forceHttps;
     
@@ -68,6 +73,18 @@ class eKomi
         $this->interfacePassword = $interfacePassword;
         $this->forceHttps        = $forcehttps;
         $this->version           = $version;
+        
+        $this->curl = curl_init();
+        
+        $options = array(
+            CURLOPT_HEADER         => false,
+            CURLOPT_FORBID_REUSE   => false,
+            CURLOPT_NOPROGRESS     => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_USERAGENT      => 'eKomi PHP library/0.1 (+flowl.info)',
+        );
+        curl_setopt_array($this->curl, $options);
     }
     
     
