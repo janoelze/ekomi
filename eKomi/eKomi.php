@@ -170,12 +170,24 @@ class eKomi
     }
     
     
-    public function getProductResearchQuestions() {
-        //@TODO get questions from the following API call
-        // http://api.ekomi.de/get_research.php?type=csv&interface_id=&interface_pw=&content=questions
-        return array();
+    public function getResearchQuestions() {
+        //Options are "results", "questions", "answers", "campaigns" or "campaign_questions". Default is "results".
+        //http://api.ekomi.de/get_research.php?type=csv&interface_id=&interface_pw=&content=questions
+    }
+
+    
+    public function getProductResearchResults() {
+        //Options are "results", "questions" and "answers". Default is "results".
+        //http://api.ekomi.de/get_productresearch.php?interface_id=&interface_pw=&type=csv&content=results
     }
     
+    public function getProductResearchQuestions() {
+        //http://api.ekomi.de/get_productresearch.php?interface_id=&interface_pw=&type=csv&content=questions
+    }
+    
+    public function getProductResearchAnswers() {
+        //http://api.ekomi.de/get_productresearch.php?interface_id=&interface_pw=&type=csv&content=answers
+    }
     
     /**
      * Fluent getter / setter for the members following
