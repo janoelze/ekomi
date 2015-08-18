@@ -66,7 +66,7 @@ class Order
     }
     
     
-    public function setReviewLink($reviewLink() {
+    public function setReviewLink($reviewLink) {
         $this->reviewLink = $reviewLink;
         return $this;
     }
