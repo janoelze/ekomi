@@ -42,11 +42,31 @@ class Product
     }
     
     
+    public function setProductId($productId) {
+      $this->productId = $productId;
+    }
+    
+    
+    public function getProductId() {
+      return $this->productId;
+    }
+    
+    
+    public function getProductOther() {
+        return $this->productOther;
+    }
+    
+    
     public function setProductName($productName) {
         if (mb_detect_encoding($productName, 'UTF-8')) {
             iconv("UTF-8", "ISO-8859-1//TRANSLIT", $productName);
         }
         $this->productName = $productName;
         return $this;
+    }
+    
+    
+    public function getProductName() {
+      return $this->productName;
     }
 }
