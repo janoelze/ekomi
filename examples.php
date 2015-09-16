@@ -17,8 +17,8 @@ $ekomi = new eKomi\eKomi;
 
 // Set the interfaceID and password credentials
 // and wether you'd like to use https or http.
-$ekomi->setUsername('xxxxx')
-      ->setPassword('xxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+$ekomi->setInterfaceId('xxxxx')
+      ->setInterfacePassword('xxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
       ->setForceHttps(true);
 
 
